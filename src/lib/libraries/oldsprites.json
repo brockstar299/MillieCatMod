@@ -1,0 +1,33 @@
+[
+    {
+        "name": "Millie",
+        "tags": [
+            "animals"
+        ],
+        "isStage": false,
+        "variables": {},
+        "costumes": [
+            {
+                "assetId": "c4b0ca64c37f84ee49489543fe9fc391",
+                "name": "Millie",
+                "bitmapResolution": 1,
+                "md5ext": "c4b0ca64c37f84ee49489543fe9fc391.png",
+                "dataFormat": "png",
+                "rotationCenterX": 31,
+                "rotationCenterY": 100
+            }
+        ],
+        "sounds": [
+            {
+                "assetId": "cf51a0c4088942d95bcc20af13202710",
+                "name": "Meow2",
+                "dataFormat": "wav",
+                "format": "",
+                "rate": 44100,
+                "sampleCount": 26048,
+                "md5ext": "cf51a0c4088942d95bcc20af13202710.wav"
+            }
+        ],
+        "blocks": {}
+    }
+]

@@ -56,7 +56,7 @@ const handleClickAddonSettings = addonId => {
 
 const messages = defineMessages({
     defaultTitle: {
-        defaultMessage: 'Run Scratch projects faster',
+        defaultMessage: 'Scratch with MORE CATS',
         description: 'Title of homepage',
         id: 'tw.guiDefaultTitle'
     }
@@ -87,7 +87,7 @@ const Footer = () => (
             <div className={styles.footerText}>
                 <FormattedMessage
                     // eslint-disable-next-line max-len
-                    defaultMessage="{APP_NAME} is not affiliated with Scratch, the Scratch Team, or the Scratch Foundation."
+                    defaultMessage="{APP_NAME} is not affiliated with Turbowarp, Scratch, the Scratch Team, or the Scratch Foundation."
                     description="Disclaimer that TurboWarp is not connected to Scratch"
                     id="tw.footer.disclaimer"
                     values={{

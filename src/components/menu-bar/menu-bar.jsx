@@ -107,6 +107,7 @@ import sharedMessages from '../../lib/shared-messages';
 import SeeInsideButton from './tw-see-inside.jsx';
 import {notScratchDesktop} from '../../lib/isScratchDesktop.js';
 import {APP_NAME} from '../../lib/brand.js';
+import log from '../../lib/log.js';
 
 const ariaMessages = defineMessages({
     tutorials: {
@@ -692,18 +693,19 @@ class MenuBar extends React.Component {
                                         </SB3Downloader>
                                     </MenuSection>
                                     {this.props.onClickPackager && (
-                                        <MenuSection>
-                                            <MenuItem
-                                                onClick={this.handleClickPackager}
-                                            >
-                                                <FormattedMessage
-                                                    defaultMessage="Package project"
-                                                    // eslint-disable-next-line max-len
-                                                    description="Menu bar item to open the current project in the packager"
-                                                    id="tw.menuBar.package"
-                                                />
-                                            </MenuItem>
-                                        </MenuSection>
+                                        log('NO')
+                                    //    <MenuSection>
+                                    //        <MenuItem
+                                    //            onClick={this.handleClickPackager}
+                                    //        >
+                                    //           <FormattedMessage
+                                    //                defaultMessage="Package project"
+                                    //               // eslint-disable-next-line max-len
+                                    //     description="Menu bar item to open the current project in the packager"
+                                    //                id="tw.menuBar.package"
+                                    //            />
+                                    //        </MenuItem>
+                                    //   </MenuSection>
                                     )}
                                     <MenuSection>
                                         <MenuItem onClick={this.handleClickRestorePoints}>

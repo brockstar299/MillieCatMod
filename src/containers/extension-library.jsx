@@ -47,41 +47,7 @@ const fetchLibrary = async () => {
         throw new Error(`HTTP status ${res.status}`);
     }
     const data = await res.json();
-    return data.extensions.map(extension => ({
-        name: extension.name,
-        nameTranslations: extension.nameTranslations || {},
-        description: extension.description,
-        descriptionTranslations: extension.descriptionTranslations || {},
-        extensionId: extension.id,
-        extensionURL: `https://extensions.turbowarp.org/${extension.slug}.js`,
-        iconURL: `https://extensions.turbowarp.org/${extension.image || 'images/unknown.svg'}`,
-        tags: ['tw'],
-        credits: [
-            ...(extension.original || []),
-            ...(extension.by || [])
-        ].map(credit => {
-            if (credit.link) {
-                return (
-                    <a
-                        href={credit.link}
-                        target="_blank"
-                        rel="noreferrer"
-                        key={credit.name}
-                    >
-                        {credit.name}
-                    </a>
-                );
-            }
-            return credit.name;
-        }),
-        docsURI: extension.docs ? `https://extensions.turbowarp.org/${extension.slug}` : null,
-        samples: extension.samples ? extension.samples.map(sample => ({
-            href: `${process.env.ROOT}editor?project_url=https://extensions.turbowarp.org/samples/${encodeURIComponent(sample)}.sb3`,
-            text: sample
-        })) : null,
-        incompatibleWithScratch: !extension.scratchCompatible,
-        featured: true
-    }));
+    return data.extensions.map();
 };
 
 class ExtensionLibrary extends React.PureComponent {

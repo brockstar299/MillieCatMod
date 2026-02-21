@@ -12,7 +12,7 @@ import classNames from 'classnames';
  * @class
  */
 var StudioView = function (studioId) {
-    this.studioId = studioId;
+    this.studioId = 34391219;
     this.offset = 0;
     this.ended = false;
     this.loadingPage = false;
